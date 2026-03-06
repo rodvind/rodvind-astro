@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="280 -40 720 1360">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="290 230 700 700">
 <defs>
   <style>
-    .bg{fill:#1e293b;rx:80}
     .s0{fill:#333745}
     .s1{fill:#FFE759}
     .s2{fill:#6989FF}
@@ -9,7 +8,7 @@
     .s4{fill:none;stroke:#FCFF4E;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round}
   </style>
 </defs>
-<rect class="bg" x="280" y="-40" width="720" height="1360" rx="80"/>
+<rect x="290" y="230" width="700" height="700" rx="90" fill="#1e293b"/>
 <g>
   <polygon class="s0" points="663.54,329.76 973.78,643.61 659.92,953.71 660.81,793.81 813.73,642.67 662.6,489.8"/>
   <polygon class="s1" points="662.6,489.8 813.73,642.67 660.81,793.81"/>
