@@ -1,0 +1,44 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <SocialIcons class="footer-social" />
+  <p class="footer-credit">Created by Rodvin Danaei © {year}</p>
+</footer>
+
+<style>
+  .footer {
+    background-color: #0f172a;
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer-social a {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-social a:hover {
+    color: #e2e8f0;
+  }
+  .footer-credit {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.87rem;
+    color: #64748b;
+  }
+</style>

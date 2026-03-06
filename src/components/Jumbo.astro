@@ -1,0 +1,90 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+interface Props {
+  count?: string;
+}
+const { count = "" } = Astro.props;
+---
+
+<section id="home" class="jumbo">
+  <div class="jumbo-inner">
+    <img src="/static/rod.jpeg" alt="Rodvin Danaei" class="jumbo-photo" width="88" height="88" />
+    <h1 class="jumbo-title">Hi, I'm Rodvin</h1>
+    <h2 class="jumbo-subtitle">A Full stack developer</h2>
+    {count && (
+      <p class="jumbo-text">
+        and this page has been viewed <span class="jumbo-count">{count}</span> times
+      </p>
+    )}
+    <hr />
+    <SocialIcons class="jumbo-social" />
+  </div>
+</section>
+
+<style>
+  .jumbo {
+    background-color: #0f172a;
+    text-align: center;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+  }
+  .jumbo-inner {
+    padding: clamp(1rem, 5vw, 2rem);
+    width: 100%;
+    max-width: 42rem;
+  }
+  .jumbo-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #334155;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+  .jumbo-title {
+    color: #f8fafc;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    font-size: clamp(2rem, 8vw, 5rem);
+  }
+  .jumbo-subtitle {
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+  .jumbo-text {
+    color: #94a3b8;
+    padding: 0.5rem;
+  }
+  .jumbo-count {
+    color: #38bdf8;
+  }
+  .jumbo hr {
+    border-color: #334155;
+    margin: 1rem auto;
+    max-width: 200px;
+  }
+  .jumbo-social {
+    display: flex;
+    gap: clamp(0.75rem, 3vw, 1rem);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .jumbo-social a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 0.75rem;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .jumbo-social a:hover {
+    color: #93c5fd;
+  }
+</style>

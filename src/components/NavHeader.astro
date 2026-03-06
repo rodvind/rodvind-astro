@@ -1,0 +1,86 @@
+---
+const path = Astro.url.pathname;
+const isHome = path === "/" || path === "";
+const isAbout = path === "/about" || path.startsWith("/about/");
+const isResume = path === "/resume" || path.startsWith("/resume/");
+const isWork = path === "/work" || path.startsWith("/work/");
+---
+<nav class="nav-header">
+  <a href="/" class="nav-brand">
+    <img src="/logo.svg" alt="Rodvin — Home" width="50" height="50" />
+  </a>
+  <div class="nav-links">
+    <a href="/" class:list={[isHome && "nav-link-active"]} aria-current={isHome ? "page" : undefined}>Home</a>
+    <a href="/about" class:list={[isAbout && "nav-link-active"]} aria-current={isAbout ? "page" : undefined}>About</a>
+    <a href="/resume" class:list={[isResume && "nav-link-active"]} aria-current={isResume ? "page" : undefined}>Resume</a>
+    <a href="/work" class:list={[isWork && "nav-link-active"]} aria-current={isWork ? "page" : undefined}>Work</a>
+  </div>
+</nav>
+
+<style>
+  .nav-header {
+    background-color: #0f172a;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    padding-inline: clamp(1rem, 4vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  .nav-brand {
+    display: inline-flex;
+  }
+  .nav-brand img {
+    width: 50px;
+    height: 50px;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
+  }
+  .nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 0.5rem 0.25rem;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.25s ease;
+  }
+  .nav-links a:hover {
+    color: #f8fafc;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  .nav-links a.nav-link-active {
+    color: #93c5fd;
+    font-weight: 600;
+  }
+  .nav-links a.nav-link-active::after {
+    width: 100%;
+    background-color: #93c5fd;
+  }
+  @media (max-width: 380px) {
+    .nav-links a { padding: 0.5rem 0.15rem; font-size: 0.95rem; }
+  }
+</style>

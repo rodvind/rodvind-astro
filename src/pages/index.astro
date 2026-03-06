@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavHeader from '../components/NavHeader.astro';
+import Jumbo from '../components/Jumbo.astro';
+import ShortAbout from '../components/ShortAbout.astro';
+import FeaturedWork from '../components/FeaturedWork.astro';
+import HomeCTAs from '../components/HomeCTAs.astro';
+import Footer from '../components/Footer.astro';
+
+const COUNTER_URL = import.meta.env.PUBLIC_COUNTER_URL;
+let count = "";
+if (COUNTER_URL) {
+	try {
+		const res = await fetch(COUNTER_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ siteUrl: "https://rodvin.com" }) });
+		const data = await res.json();
+		count = String(data[0]?.visits ?? "");
+	} catch {}
+}
+---
+
+<Layout title="Rodvin — Full stack developer">
+	<NavHeader />
+	<main id="main-content">
+	<Jumbo count={count} />
+	<ShortAbout />
+	<FeaturedWork />
+	<HomeCTAs />
+	</main>
+	<Footer />
+</Layout>

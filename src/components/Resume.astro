@@ -1,0 +1,148 @@
+---
+import Tools from './Tools.astro';
+---
+
+<section id="my_work" class="resume">
+  <div class="resume-inner">
+    <div class="resume-row">
+      <div class="resume-label"><span class="cert-label">CERTIFICATIONS</span></div>
+      <div class="resume-content">
+        <a href="https://www.credly.com/badges/9cbf6658-9301-4380-9bc9-6f20277f1d1f/public_url" target="_blank" rel="noopener noreferrer">
+          <img src="/static/aws-certified-solutions-architect-associate.png" alt="AWS Solutions Architect Associate" class="cert-img" loading="lazy" width="80" height="80" />
+        </a>
+        <a href="https://www.credly.com/badges/debc0506-c300-4f21-8331-0ff07cf4a6f6/public_url" target="_blank" rel="noopener noreferrer">
+          <img src="/static/project-management-professional-pmp.png" alt="PMP" class="cert-img" loading="lazy" width="80" height="80" />
+        </a>
+      </div>
+    </div>
+    <hr />
+    <div class="resume-row">
+      <div class="resume-label"><span class="cert-label">WORKS</span></div>
+      <div class="resume-content">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <strong class="company">EECOL</strong>
+              <span class="title">Full-stack developer</span>
+              <span class="timeline-date">May 2019 - Present</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <strong class="company">ReWatt Power</strong>
+              <span class="title">Full-stack developer</span>
+              <span class="timeline-date">December 2018 - May 2019</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <strong class="company">Cenovus</strong>
+              <span class="title">Engineering Information Management Technician</span>
+              <span class="timeline-date">July 2014 - May 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="resume-row">
+      <div class="resume-label"><span class="toolset-label">MY TOOLSET</span></div>
+      <div class="resume-content">
+        <Tools />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .resume {
+    margin: 0;
+    padding: clamp(1rem, 5vw, 2rem) clamp(0.75rem, 4vw, 1rem) 3rem;
+    min-height: 80vh;
+  }
+  .resume-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .resume hr {
+    border-color: #e2e8f0;
+    margin: 1.5rem 0;
+  }
+  .resume-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .resume-label {
+    flex: 0 0 140px;
+  }
+  .resume-content {
+    flex: 1;
+    min-width: 0;
+  }
+  @media (max-width: 520px) {
+    .resume-label { flex: 1 1 100%; }
+    .resume-content { flex: 1 1 100%; }
+  }
+  .cert-label, .toolset-label {
+    border-bottom: solid 1px #3b82f6;
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #1e293b;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .cert-img {
+    max-height: 80px;
+    max-width: 100%;
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid #e2e8f0;
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -1.75rem;
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    border: 2px solid #fff;
+  }
+  .timeline-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .timeline-date {
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+  .company {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+  }
+  .title {
+    font-family: 'Libre Baskerville', serif;
+    color: #64748b;
+    font-style: italic;
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+---
+<section id="about_me" class="about">
+  <div class="about-inner">
+    <div class="about-pic-wrap">
+      <img src="/static/rod.jpeg" alt="Rodvin Danaei" class="about-pic" width="120" height="130" loading="lazy" />
+    </div>
+    <div class="about-text">
+      <h1 class="about-title">About me</h1>
+      <p class="about-para">
+        Hi, I'm Rodvin Danaei, a previous geneticist falling in love with programming and now a Full-stack Developer, cloud advocate, data scientist, gamer, and a die-hard fan of all kinds of outdoor activities.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: #1e293b;
+    padding: clamp(1rem, 5vw, 2rem);
+    margin: 0;
+    min-height: 35vh;
+  }
+  .about-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 4vw, 2rem);
+    align-items: flex-start;
+  }
+  .about-pic {
+    width: 120px;
+    height: 130px;
+    min-width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  @media (max-width: 360px) {
+    .about-pic { width: 100px; height: 110px; min-width: 100px; }
+  }
+  .about-title {
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+  }
+  .about-para {
+    color: #e2e8f0;
+    line-height: 1.6;
+  }
+</style>

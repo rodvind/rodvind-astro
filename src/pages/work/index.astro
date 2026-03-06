@@ -1,0 +1,90 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NavHeader from '../../components/NavHeader.astro';
+import Footer from '../../components/Footer.astro';
+import { work } from '../../data/work';
+import Tools from '../../components/Tools.astro';
+---
+
+<Layout title="Work — Rodvin" description="Projects and tech stack.">
+	<NavHeader />
+	<main id="main-content">
+	<section class="work-page">
+		<div class="work-page-inner">
+			<h1 class="work-page-title">Work</h1>
+			<p class="work-page-intro">Projects and things I've built.</p>
+			<ul class="work-list">
+				{work.map((item) => (
+					<li class="work-item">
+						<a href={item.link} target="_blank" rel="noopener noreferrer" class="work-link">
+							<strong>{item.title}</strong>
+							<span class="work-desc">{item.description}</span>
+						</a>
+					</li>
+				))}
+			</ul>
+			<h2 class="work-section-title">Tech stack</h2>
+			<Tools />
+		</div>
+	</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+  .work-page {
+    padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+    margin: 0;
+    min-height: 60vh;
+  }
+  .work-page-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .work-page-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+  .work-page-intro {
+    color: #64748b;
+    margin-bottom: 2rem;
+  }
+  .work-list {
+    list-style: none;
+    margin: 0 0 3rem 0;
+    padding: 0;
+  }
+  .work-item {
+    margin-bottom: 1rem;
+  }
+  .work-link {
+    display: block;
+    padding: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1e293b;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+  }
+  .work-link:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .work-link strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .work-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+  }
+  .work-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+</style>

@@ -1,0 +1,78 @@
+---
+import { work } from '../data/work';
+const featured = work.slice(0, 3);
+---
+
+<section class="featured-work fade-section">
+  <div class="featured-work-inner">
+    <h2 class="featured-work-title">Featured work</h2>
+    <ul class="featured-work-list">
+      {featured.map((item) => (
+        <li class="featured-work-item">
+          <a href={item.link} target="_blank" rel="noopener noreferrer" class="featured-work-link">
+            <strong>{item.title}</strong>
+            <span class="featured-work-desc">{item.description}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a href="/work" class="featured-work-cta">See all work →</a>
+  </div>
+</section>
+
+<style>
+  .featured-work {
+    padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+    margin: 0;
+    background-color: #f8fafc;
+  }
+  .featured-work-inner {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  .featured-work-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    color: #1e293b;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+  .featured-work-list {
+    list-style: none;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+  }
+  .featured-work-item {
+    margin-bottom: 1rem;
+  }
+  .featured-work-link {
+    display: block;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1e293b;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+  }
+  .featured-work-link:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .featured-work-link strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .featured-work-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+  }
+  .featured-work-cta {
+    color: #3b82f6;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .featured-work-cta:hover {
+    text-decoration: underline;
+  }
+</style>

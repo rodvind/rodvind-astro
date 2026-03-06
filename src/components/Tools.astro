@@ -1,0 +1,38 @@
+---
+import { tools } from '../data/tools';
+---
+
+<div class="tools-grid">
+  {tools.map((t) => (
+    <a href={t.link} target="_blank" rel="noopener noreferrer" class="tool-link" title={t.name}>
+      <img src={t.icon} alt={t.name} class="tool-icon" width="50" height="50" loading="lazy" />
+    </a>
+  ))}
+</div>
+
+<style>
+  .tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .tool-link {
+    color: #000;
+    display: inline-flex;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  .tool-link:hover .tool-icon {
+    transform: scale(1.25);
+    transition: transform 0.3s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tool-link:hover .tool-icon { transform: none; }
+  }
+  .tool-icon {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    display: block;
+  }
+</style>
