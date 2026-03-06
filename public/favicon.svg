@@ -1,27 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="290 230 700 700">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="300 280 720 720">
 <defs>
   <style>
     .s0{fill:#333745}
     .s1{fill:#FFE759}
     .s2{fill:#6989FF}
-    .s3{fill:#FF5325}
     .s4{fill:none;stroke:#FCFF4E;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round}
   </style>
 </defs>
-<rect x="290" y="230" width="700" height="700" rx="90" fill="#1e293b"/>
+<rect x="300" y="280" width="720" height="720" rx="90" fill="#1e293b"/>
 <g>
   <polygon class="s0" points="663.54,329.76 973.78,643.61 659.92,953.71 660.81,793.81 813.73,642.67 662.6,489.8"/>
   <polygon class="s1" points="662.6,489.8 813.73,642.67 660.81,793.81"/>
-  <path class="s0" d="M353.39,16.05l310.14,313.71L349.78,640L353.39,16.05z M569.98,329.21L418.65,176.14l-1.73,304.41L569.98,329.21z"/>
   <polygon class="s2" points="663.54,329.76 662.6,489.8 509.73,640.94 660.81,793.81 659.92,953.71 349.78,640"/>
   <polygon class="s0" points="662.6,489.8 660.81,793.81 509.73,640.94"/>
-  <path class="s0" d="M349.78,640l310.14,313.71l-313.76,310.24L349.78,640z M566.37,953.21L415.03,800.09l-1.73,304.41L566.37,953.21z"/>
-  <polygon class="s1" points="418.65,176.14 569.98,329.21 416.91,480.55"/>
-  <polygon class="s3" points="415.03,800.09 566.37,953.21 413.3,1104.5"/>
-  <polygon class="s4" points="349.78,640 353.39,16.05 663.54,329.76"/>
-  <polygon class="s4" points="569.98,329.21 416.91,480.55 418.65,176.14"/>
-  <polygon class="s4" points="349.78,640 659.92,953.71 346.17,1263.95"/>
-  <polygon class="s4" points="566.37,953.21 413.3,1104.5 415.03,800.09"/>
   <polygon class="s4" points="663.54,329.76 973.78,643.61 659.92,953.71 660.81,793.81 662.6,489.8"/>
   <polygon class="s4" points="662.6,489.8 509.73,640.94 660.81,793.81 813.73,642.67"/>
 </g>
