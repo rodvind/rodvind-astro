@@ -39,6 +39,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? "https://rodvin.c
 				color: #333;
 				-webkit-font-smoothing: antialiased;
 				text-rendering: optimizeLegibility;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+			main {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
 			}
 			[id] { scroll-margin-top: 4rem; }
 			.skip-link {
