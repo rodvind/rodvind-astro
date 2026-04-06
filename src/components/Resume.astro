@@ -5,7 +5,7 @@ import Tools from './Tools.astro';
 <section id="my_work" class="resume">
   <div class="resume-inner">
     <div class="resume-row">
-      <div class="resume-label"><span class="cert-label">CERTIFICATIONS</span></div>
+      <div class="resume-label"><span class="section-label">CERTIFICATIONS</span></div>
       <div class="resume-content">
         <a href="https://www.credly.com/badges/9cbf6658-9301-4380-9bc9-6f20277f1d1f/public_url" target="_blank" rel="noopener noreferrer">
           <img src="/static/aws-certified-solutions-architect-associate.png" alt="AWS Solutions Architect Associate" class="cert-img" loading="lazy" width="80" height="80" />
@@ -16,40 +16,115 @@ import Tools from './Tools.astro';
       </div>
     </div>
     <hr />
+
     <div class="resume-row">
-      <div class="resume-label"><span class="cert-label">WORKS</span></div>
+      <div class="resume-label"><span class="section-label">EXPERIENCE</span></div>
       <div class="resume-content">
         <div class="timeline">
+
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-body">
-              <strong class="company">EECOL</strong>
-              <span class="title">Full-stack developer</span>
-              <span class="timeline-date">May 2019 - Present</span>
+              <strong class="company">Improving</strong>
+              <span class="role">Senior Frontend Consultant / AI-Augmented Modernization Architect</span>
+              <span class="timeline-date">Aug 2022 – Present</span>
+              <ul class="role-details">
+                <li>Led the end-to-end modernization of a legacy monolith into a modular, domain-driven microservices ecosystem spanning Vue 3/TypeScript frontend and .NET backend services</li>
+                <li>Designed a layered, module-centric frontend architecture (Pinia state management, API service abstraction, strongly-typed DTOs, composables) enforcing clear domain boundaries</li>
+                <li>Architected containerized infrastructure using Docker Compose with automated service orchestration, database lifecycle management, NGINX routing, and versioned image delivery via GitLab Container Registry</li>
+                <li>Established contract-first API governance with backend engineers, ensuring strict alignment between frontend and service models</li>
+                <li>Integrated AI-assisted development tools (GitHub Copilot, Cursor AI) across the SDLC — accelerating code generation, architecture exploration, refactoring, and merge request reviews</li>
+                <li>Trained engineers, Product Owners, and PMs on AI-assisted development practices, prompt engineering, and responsible AI usage guidelines</li>
+                <li>Drove Agile delivery using Scrum, contributed to GitLab CI/CD automation, and established frontend testing strategy with Vitest</li>
+                <li>Mentored junior developers in modern frontend architecture, microservices integration, and delivery practices</li>
+              </ul>
             </div>
           </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <strong class="company">Improving</strong>
+              <span class="role">Frontend Developer</span>
+              <span class="timeline-date">Feb 2022 – Aug 2022</span>
+              <ul class="role-details">
+                <li>Developed customer-facing website and landing pages using React, TypeScript, and MUI, translating client requirements into production features</li>
+                <li>Collaborated with backend engineers to develop and optimize APIs; built data visualizations using nivo and Victory</li>
+                <li>Implemented end-to-end test coverage using Cypress and delivered features within sprint cadence</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <strong class="company">EECOL Electric</strong>
+              <span class="role">Full-Stack Developer</span>
+              <span class="timeline-date">May 2019 – Feb 2022</span>
+              <ul class="role-details">
+                <li>Designed and built the company e-commerce platform using Gatsby, React, and AWS; led the POC phase as acting PM</li>
+                <li>Developed integration APIs bridging MuleSoft with IBM AS400 for order processing</li>
+                <li>Built an order entry application using Xamarin and Python, streamlining field operations</li>
+                <li>Planned and executed enterprise GitHub migration, authored deployment standards for testing, staging, and production</li>
+                <li>Mentored developers on AWS services and Git workflows; introduced Agile methodology to the team</li>
+              </ul>
+            </div>
+          </div>
+
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-body">
               <strong class="company">ReWatt Power</strong>
-              <span class="title">Full-stack developer</span>
-              <span class="timeline-date">December 2018 - May 2019</span>
+              <span class="role">Full-Stack Developer</span>
+              <span class="timeline-date">Dec 2018 – May 2019</span>
+              <ul class="role-details">
+                <li>Built platform features using React frontend with PHP and Node.js backends</li>
+                <li>Implemented CI/CD pipeline with Travis CI for automated testing and deployment to staging and production</li>
+                <li>Integrated ZenHub with GitHub for sprint-based ticket management</li>
+              </ul>
             </div>
           </div>
+
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-body">
-              <strong class="company">Cenovus</strong>
-              <span class="title">Engineering Information Management Technician</span>
-              <span class="timeline-date">July 2014 - May 2019</span>
+              <strong class="company">Cenovus Energy</strong>
+              <span class="role">Engineering Information Management Technician</span>
+              <span class="timeline-date">Jun 2014 – May 2019</span>
+              <ul class="role-details">
+                <li>Collaborated with vendor to develop an enterprise document management system (EDMS) using Java</li>
+                <li>Managed 2,000+ Management of Change projects across engineering operations</li>
+                <li>Planned and executed multi-stage data migration from Microsoft Access to SQL Server to AWS</li>
+              </ul>
             </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="resume-row">
+      <div class="resume-label"><span class="section-label">EDUCATION</span></div>
+      <div class="resume-content">
+        <div class="education-list">
+          <div class="education-item">
+            <strong class="company">University of Calgary</strong>
+            <span class="role">B.Sc. Computer Science</span>
+            <span class="timeline-date">2015 – 2019</span>
+          </div>
+          <div class="education-item">
+            <strong class="company">Wageningen University</strong>
+            <span class="role">M.Sc. Plant Biotechnology</span>
+            <span class="timeline-date">2012 – 2013</span>
           </div>
         </div>
       </div>
     </div>
     <hr />
+
     <div class="resume-row">
-      <div class="resume-label"><span class="toolset-label">MY TOOLSET</span></div>
+      <div class="resume-label"><span class="section-label">MY TOOLSET</span></div>
       <div class="resume-content">
         <Tools />
       </div>
@@ -87,7 +162,7 @@ import Tools from './Tools.astro';
     .resume-label { flex: 1 1 100%; }
     .resume-content { flex: 1 1 100%; }
   }
-  .cert-label, .toolset-label {
+  .section-label {
     border-bottom: solid 1px #3b82f6;
     padding-bottom: 0.5rem;
     font-size: 0.9rem;
@@ -140,9 +215,33 @@ import Tools from './Tools.astro';
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
   }
-  .title {
+  .role {
     font-family: 'Libre Baskerville', serif;
     color: #64748b;
     font-style: italic;
+  }
+  .role-details {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+    color: #475569;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .role-details li {
+    margin-bottom: 0.35rem;
+  }
+  .role-details li:last-child {
+    margin-bottom: 0;
+  }
+  .education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .education-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
   }
 </style>
